@@ -96,7 +96,7 @@ export async function createProfile(payload) {
 
 export async function fetchAccount() {
   const response = await requestWithRetry({
-    url: "/auth/me",
+    url: "/api/users/me",
     method: "GET"
   });
 
