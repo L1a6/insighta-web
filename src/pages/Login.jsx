@@ -1,5 +1,6 @@
 const apiBaseUrl =
-  import.meta.env.VITE_API_BASE_URL || "http://localhost:3000";
+  import.meta.env.VITE_API_BASE_URL ||
+  "https://api-backend-tan-iota.vercel.app";
 
 export default function Login() {
   const loginUrl = `${apiBaseUrl}/auth/github`;
