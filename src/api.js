@@ -4,8 +4,10 @@ const apiBaseUrl =
   import.meta.env.VITE_API_BASE_URL ||
   "https://api-backend-tan-iota.vercel.app";
 
+const normalizedApiBaseUrl = apiBaseUrl.replace(/\/+$/, "");
+
 const client = axios.create({
-  baseURL: apiBaseUrl,
+  baseURL: normalizedApiBaseUrl,
   withCredentials: true,
   headers: {
     "X-API-Version": "1",

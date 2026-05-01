@@ -2,8 +2,10 @@ const apiBaseUrl =
   import.meta.env.VITE_API_BASE_URL ||
   "https://api-backend-tan-iota.vercel.app";
 
+const normalizedApiBaseUrl = apiBaseUrl.replace(/\/+$/, "");
+
 export default function Login() {
-  const loginUrl = `${apiBaseUrl}/auth/github`;
+  const loginUrl = `${normalizedApiBaseUrl}/auth/github`;
 
   return (
     <section className="card">
